@@ -12,8 +12,9 @@ on:
       - 'feature-*'
       - 'release-*'
   schedule:
-    # 5 PM IST is 11:30 AM UTC (IST is UTC+5:30)
-    - cron: '0 17 * * 3,5'
+    # Every Wednesday & Friday at 11:30 UTC → 17:00 IST
+    - cron: '30 11 * * 3,5'
+
 
 env:
   ARTIFACT_VERSION: ${{ github.ref_name }}-${{ github.sha }}
