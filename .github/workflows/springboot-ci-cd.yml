@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - main
-      - staging
+      - stagging
   release:
     types: [published]
 
@@ -34,7 +34,7 @@ jobs:
   deploy_staging:
     needs: build
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/staging'
+    if: github.ref == 'refs/heads/stagging'
 
     steps:
       - name: Deploy to Staging
